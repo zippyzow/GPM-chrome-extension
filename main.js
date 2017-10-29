@@ -1,5 +1,3 @@
-console.log("content.js loaded");
-
 var continueLoop = false;
 
 function skipSong() {
@@ -19,7 +17,7 @@ function numTimesPlayed() {
 
 function skipIfPlayed() {
   if (continueLoop) {
-    setTimeout(function () {
+    setTimeout(function() {
       if (numTimesPlayed() > 0 && continueLoop) {
         skipSong();
       }
@@ -29,8 +27,11 @@ function skipIfPlayed() {
   }
 }
 
+// API
+
 function start() {
   console.log('start');
+  window._skipIfPlayedOn = true;
   if (!continueLoop) {
     continueLoop = true;
     skipIfPlayed();
@@ -39,5 +40,10 @@ function start() {
 
 function stop() {
   console.log('stop');
+  window._skipIfPlayedOn = false;
   continueLoop = false;
+}
+
+function isOn() {
+  return window._skipIfPlayedOn;
 }

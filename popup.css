@@ -1,0 +1,21 @@
+.main-container {
+  width: 200px;
+  text-align: center;
+}
+
+.next-icon {
+  margin: 10px 0;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.button-container {
+  margin: 20px 5px;
+}
+
+.switch-label {
+  margin: 20px 0 !important;
+  width: auto !important;
+}
